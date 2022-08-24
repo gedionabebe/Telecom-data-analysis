@@ -1,8 +1,8 @@
 import pandas as pd
 from sklearn.preprocessing import StandardScaler, MinMaxScaler
-from data_extraction import Data_extract
+from scripts.data_extraction import Data_extract
 
-data = Data_extract()
+#data = Data_extract()
 
 def to_numbers(data,col):
     data[col] = pd.to_numeric(data[col])
@@ -23,8 +23,8 @@ def fill_missing_values(data,col):
 
         return data
 
-    else:
-        data[col] = data[col].fillna(data[col].median()[0])
+    elif data.dtypes[col] != 'object':
+        data[col] = data[col].fillna(data[col].median())
 
         return data
 

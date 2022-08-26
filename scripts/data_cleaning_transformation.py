@@ -1,4 +1,5 @@
 import pandas as pd
+import numpy as np
 from sklearn.preprocessing import StandardScaler, MinMaxScaler
 from scripts.data_extraction import Data_extract
 
@@ -24,9 +25,14 @@ def fill_missing_values(data,col):
         return data
 
     elif data.dtypes[col] != 'object':
-        data[col] = data[col].fillna(data[col].median())
+        data[col] = data[col].fillna(data[col].mean())
 
         return data
+
+def fix_outlier(data, column):
+    data[column] = np.where(data[column] > data[column].quantile(0.95), data[column].median(),data[column])
+    
+    return data
 
 def convert_bytes_to_megabytes(data, col):
 

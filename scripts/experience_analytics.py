@@ -1,5 +1,5 @@
 import pandas as pd
-from experience_analytics import k_means
+from user_engagement_analysis import k_means
 from sklearn.preprocessing import LabelEncoder
 
 def experience_metrics(data):

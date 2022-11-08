@@ -2,10 +2,10 @@ import pandas as pd
 import numpy as np
 from sklearn.preprocessing import LabelEncoder
 from sklearn.metrics.pairwise import euclidean_distances
-from user_engagement_analysis import k_means
-from experience_analytics import experience_metrics
-from user_engagement_analysis import session_frequency, session_duration, session_total_traffic
-from data_extraction import Data_extract
+from scripts.user_engagement_analysis import k_means
+from scripts.experience_analytics import experience_metrics
+from scripts.user_engagement_analysis import session_frequency, session_duration, session_total_traffic
+from scripts.data_extraction import Data_extract
 
 
 

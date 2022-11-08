@@ -1,7 +1,7 @@
 import pandas as pd
 import numpy as np
 from sklearn.preprocessing import StandardScaler, MinMaxScaler
-from data_extraction import Data_extract
+from scripts.data_extraction import Data_extract
 
 #data = Data_extract()
 

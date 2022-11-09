@@ -1,9 +1,7 @@
 import pandas as pd
 import numpy as np
 from sklearn.preprocessing import StandardScaler, MinMaxScaler
-from data_extraction import Data_extract
 
-#data = Data_extract()
 
 def to_numbers(data,col):
     data[col] = pd.to_numeric(data[col])
